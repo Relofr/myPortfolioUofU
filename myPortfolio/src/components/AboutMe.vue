@@ -26,7 +26,7 @@ export default {
 <template>
   <div class="flex-container">
     <img class="profile-picture" alt="profile picture" src="@/assets/ProfilePicture.jpeg" />
-    <div class="row">
+    <div class="inner-container row">
       <div class="flex-item name">{{ name }}</div>
       <div class="flex-item job">{{ job }}</div>
       <div class="flex-item bio">{{ bio }}</div>
@@ -56,6 +56,10 @@ export default {
   height: calc(100vh - 64px);
 }
 
+.inner-container {
+  width: 100%;
+}
+
 .row {
   display: flex;
   flex-direction: column;
@@ -63,7 +67,7 @@ export default {
   align-items: flex-start;
   padding: 0px;
   gap: 15px;
-  width: 491px;
+  width: 500px;
   height: calc(100vh - 64px);
   flex: none;
   order: 1;
@@ -82,5 +86,32 @@ export default {
 
 .bio {
   font-size: 16px;
+}
+
+@media(max-width: 1000px) {
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: calc(0px + 64px);
+    padding: 15px;
+    gap: 25px;
+    width: 100%;
+  }
+
+  .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  padding: 0px;
+  gap: 15px;
+  width: auto;
+  height: calc(100vh - 64px);
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 1;
+  }
 }
 </style>
