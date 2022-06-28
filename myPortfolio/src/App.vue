@@ -8,8 +8,7 @@ import Navbar from '@/components/Navbar.vue'
   <Navbar />
   <header>
     <div>
-      <AboutMe name="Kyle Hatch" job="Software Engineer + UX/UI designer at LogMeIn" bio="Software Engineer + UX/UI designer at LogMeIn
-Passionate about bringing my ideas to life and creating a great user experience." />
+      <AboutMe name="Kyle Hatch" job="Software Engineer + UX/UI designer at LogMeIn" bio="Passionate about bringing my ideas to life and creating a great user experience." />
     </div>
   </header>
 
