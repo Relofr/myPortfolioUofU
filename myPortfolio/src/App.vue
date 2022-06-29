@@ -11,7 +11,7 @@ import Footer from '@/components/Footer.vue'
 </template>
 
 <style>
-@import '@/assets/base.css';
+/* @import '@/assets/base.css'; */
 
 #app {
   width: 100vw;
