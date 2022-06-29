@@ -1,18 +1,13 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import AboutMe from '@/components/AboutMe.vue'
 import Navbar from '@/components/Navbar.vue'
+import Footer from '@/components/Footer.vue'
 </script>
 
 <template>
   <Navbar />
-  <header>
-    <div>
-      <AboutMe name="Kyle Hatch" job="Software Engineer + UX/UI designer at LogMeIn" bio="Passionate about bringing my ideas to life and creating a great user experience." />
-    </div>
-  </header>
-
   <RouterView />
+  <Footer />
 </template>
 
 <style>

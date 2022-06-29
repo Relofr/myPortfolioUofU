@@ -22,7 +22,7 @@ export default {
                     <RouterLink to="/">Home</RouterLink>
                 </li>
                 <li>
-                    <RouterLink to="/about">About</RouterLink>
+                    <RouterLink to="/contact">Contact</RouterLink>
                 </li>
             </ul>
         </div>
@@ -30,10 +30,10 @@ export default {
 
     <ul class="sidenav" id="mobile-demo">
         <li>
-            <RouterLink to="/about">Home</RouterLink>
+            <RouterLink to="/">Home</RouterLink>
         </li>
         <li>
-            <RouterLink to="/about">About</RouterLink>
+            <RouterLink to="/contact">Contact</RouterLink>
         </li>
     </ul>
 
