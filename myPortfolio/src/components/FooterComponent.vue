@@ -48,7 +48,7 @@
         </div>
         <div class="footer-copyright">
             <div class="container black-text">
-                © 2022 Portfolio - Kyle Hatch
+                ©{{ new Date().getFullYear() }} Portfolio - Kyle Hatch
                 <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
             </div>
         </div>
