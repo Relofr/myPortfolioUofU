@@ -6,7 +6,6 @@ export default {
                 var elems = document.querySelectorAll('.sidenav');
                 var instances = M.Sidenav.init(elems, options);
             });
-            console.log('Hi')
         }
     }
 }
@@ -15,11 +14,18 @@ export default {
 <template>
     <nav>
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Logo</a>
-            <a @click="triggerNav()" href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <a><img class="brand-logo" src="@/assets/logo.png"></a>
+            <a @click="triggerNav()" href="#" data-target="mobile-demo" class="sidenav-trigger"><i
+                    class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li>
                     <RouterLink to="/">Home</RouterLink>
+                </li>
+                <li>
+                    <RouterLink to="/work">Work</RouterLink>
+                </li>
+                <li>
+                    <RouterLink to="/about">About</RouterLink>
                 </li>
                 <li>
                     <RouterLink to="/contact">Contact</RouterLink>
@@ -31,6 +37,12 @@ export default {
     <ul class="sidenav" id="mobile-demo">
         <li>
             <RouterLink to="/">Home</RouterLink>
+        </li>
+        <li>
+            <RouterLink to="/work">Work</RouterLink>
+        </li>
+        <li>
+            <RouterLink to="/about">About</RouterLink>
         </li>
         <li>
             <RouterLink to="/contact">Contact</RouterLink>
@@ -46,6 +58,7 @@ export default {
 
 nav {
     background-color: #fff;
+    // line-height: 60px;
 
     a {
         color: black;
@@ -59,5 +72,10 @@ nav {
         padding: 0 15px;
         cursor: pointer;
     }
+}
+.brand-logo {
+    width: 65px;
+    padding: 10px;
+    vertical-align: middle;
 }
 </style>

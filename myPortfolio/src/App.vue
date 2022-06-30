@@ -1,18 +1,27 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import Navbar from '@/components/Navbar.vue'
-import Footer from '@/components/Footer.vue'
+import NavbarComponent from '@/components/NavbarComponent.vue'
+import FooterComponent from './components/FooterComponent.vue'
+
+</script>
+
+<script>
+import M from 'materialize-css'
+
+export default {
+  mounted() {
+    M.AutoInit()
+  }
+}
 </script>
 
 <template>
-  <Navbar />
+  <NavbarComponent />
   <RouterView />
-  <Footer />
+  <FooterComponent />
 </template>
 
 <style>
-/* @import '@/assets/base.css'; */
-
 #app {
   width: 100vw;
   height: 100vh;

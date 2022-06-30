@@ -1,15 +1,15 @@
 <script>
 export default {
   props: {
-    github: {
+    name: {
       type: String,
       required: true
     },
-    linkedin: {
+    job: {
       type: String,
       required: true
     },
-    email: {
+    bio: {
       type: String,
       required: true
     }
@@ -25,15 +25,15 @@ export default {
 
 <template>
   <div class="flex-container">
-    <!-- <img class="profile-picture" alt="profile picture" src="@/assets/ProfilePicture.jpeg" /> -->
+    <img class="profile-picture" alt="profile picture" src="@/assets/ProfilePicture.jpeg" />
     <div class="inner-container row">
-      <div class="flex-item name">{{ github }}</div>
-      <div class="flex-item job">{{ linkedin }}</div>
-      <div class="flex-item bio">{{ email }}</div>
-      <!-- <div>
-        <a @click="downloadResume()" class="waves-effect waves-light btn"><i
+      <div class="flex-item name">{{ name }}</div>
+      <div class="flex-item job">{{ job }}</div>
+      <div class="flex-item bio">{{ bio }}</div>
+      <div>
+        <a @click="downloadResume()" class="waves-effect waves-light red darken-4 btn"><i
             class="material-icons right">file_download</i>Resume</a>
-      </div> -->
+      </div>
     </div>
   </div>
 </template>
@@ -97,6 +97,7 @@ export default {
     padding: 15px;
     gap: 25px;
     width: 100%;
+    height: 100%;
   }
 
   .row {
