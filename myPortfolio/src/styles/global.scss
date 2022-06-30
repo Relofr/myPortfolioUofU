@@ -1,0 +1,27 @@
+@import './constants';
+
+body,
+html {
+  height: 100vh;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font-size: 14px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.4;
+  font-weight: normal;
+}
+
+
+// .timeline {
+//   @media (max-width: #{map-get($breakpoints, medium)}) {
+//     width: 100%;
+//   }
+
+//   @media (min-width: #{map-get($breakpoints, medium)}) {
+//     width: 60%
+//   }
+// }

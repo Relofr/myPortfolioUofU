@@ -5,6 +5,8 @@ import router from './router'
 import 'materialize-css/dist/css/materialize.min.css'
 import 'material-design-icons/iconfont/material-icons.css'
 
+import './styles/global.scss'
+
 const app = createApp(App)
 
 app.use(router)

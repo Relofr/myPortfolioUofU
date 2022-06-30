@@ -16,16 +16,37 @@ export default {
 </script>
 
 <template>
-  <NavbarComponent />
-  <RouterView />
-  <FooterComponent />
+  <div class="wrapper" id="app">
+    <NavbarComponent />
+    <router-view v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component"></component>
+      </transition>
+    </router-view>
+    <FooterComponent />
+  </div>
 </template>
 
 <style>
+@import "@/styles/constants.scss";
+
 #app {
-  width: 100vw;
-  height: 100vh;
-  margin: 0 auto;
-  font-weight: normal;
+  font-family: Roboto, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+  height: 100%;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
