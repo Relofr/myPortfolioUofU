@@ -16,15 +16,15 @@ export default {
 </script>
 
 <template>
+  <NavbarComponent />
   <div class="wrapper" id="app">
-    <NavbarComponent />
     <router-view v-slot="{ Component }">
       <transition name="fade" mode="out-in">
         <component :is="Component"></component>
       </transition>
     </router-view>
-    <FooterComponent />
   </div>
+  <FooterComponent /> 
 </template>
 
 <style>
@@ -34,15 +34,19 @@ export default {
   font-family: Roboto, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 .wrapper {
-  height: 100%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 25px 70px 0 70px;
 }
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease;
 }
 
 .fade-enter-from,
