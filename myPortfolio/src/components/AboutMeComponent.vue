@@ -22,12 +22,17 @@ export default {
 
 <style scoped>
 .flex-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  padding: 0px;
+  gap: 80px;
+  width: 1000px;
 }
 
 .aboutme {
-    width: 1000px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-content: flex-start;
@@ -39,10 +44,6 @@ export default {
     margin-bottom: 10px;
     font-size: 32px;
     font-weight: 700;
-}
-
-.body {
-    margin-bottom: 20px;
 }
 
 img {

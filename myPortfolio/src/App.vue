@@ -37,13 +37,6 @@ export default {
 
 }
 
-.wrapper {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  margin: 25px 70px 0 70px;
-}
-
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.3s ease;

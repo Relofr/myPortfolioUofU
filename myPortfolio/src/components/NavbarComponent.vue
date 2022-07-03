@@ -58,6 +58,7 @@ export default {
 
 nav {
     background-color: #fff;
+    width: 100%;
     // line-height: 60px;
 
     a {

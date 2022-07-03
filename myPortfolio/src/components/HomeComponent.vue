@@ -1,13 +1,15 @@
 <template>
   <div class="flex-container">
-    <img class="profile-picture" alt="profile picture" src="@/assets/ProfilePicture.jpeg" />
-    <div class="inner-container row">
-      <div class="flex-item name">{{ name }}</div>
-      <div class="flex-item job">{{ job }}</div>
-      <div class="flex-item bio">{{ bio }}</div>
-      <div>
-        <a @click="downloadResume()" class="waves-effect waves-light red darken-4 btn"><i
-            class="material-icons right">file_download</i>Resume</a>
+    <div class="home-container">
+      <img class="profile-picture" alt="profile picture" src="@/assets/ProfilePicture.jpeg" />
+      <div class="inner-container row">
+        <div class="flex-item name">{{ name }}</div>
+        <div class="flex-item job">{{ job }}</div>
+        <div class="flex-item bio">{{ bio }}</div>
+        <div>
+          <a @click="downloadResume()" class="waves-effect waves-light red darken-4 btn"><i
+              class="material-icons right">file_download</i>Resume</a>
+        </div>
       </div>
     </div>
   </div>
@@ -38,22 +40,26 @@ export default {
 </script>
 
 <style scoped>
-.profile-picture {
-  width: 335px;
-  height: 335px;
-  border-radius: 50%;
-}
-
 .flex-container {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+}
+
+.home-container {
+  display: flex;
   align-items: center;
-  margin: auto;
-  padding: 0px;
   gap: 80px;
-  width: 1000px;
   height: calc(100vh - 64px);
 }
+
+.profile-picture {
+  max-width: 335px;
+  height: 100%;
+  max-height: 335px;
+  border-radius: 50%;
+}
+
 
 .inner-container {
   width: 100%;
@@ -67,7 +73,6 @@ export default {
   padding: 0px;
   gap: 15px;
   width: 500px;
-  height: calc(100vh - 64px);
   flex: none;
   order: 1;
   align-self: stretch;
@@ -92,11 +97,18 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: calc(0px + 64px);
     padding: 15px;
     gap: 25px;
     width: 100%;
     height: 100%;
+  }
+
+  .home-container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    height: calc(100vh - 64px);
+    flex-direction: column;
   }
 
   .row {
@@ -107,7 +119,6 @@ export default {
     padding: 0px;
     gap: 15px;
     width: auto;
-    height: calc(100vh - 64px);
     flex: none;
     order: 1;
     align-self: stretch;

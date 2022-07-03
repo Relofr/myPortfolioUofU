@@ -1,21 +1,19 @@
 <template>
-  <main>
-    <div class="flex-container">
-      <div class="aboutme">
-        <div v-for="(post, index) in posts" :key="index">
-          <div v-if="post.title" class="title">{{ post.title }}</div>
-          <div v-if="post.body" class="body">{{ post.body }}</div>
-          <div class="skills-container">
-            <div class="skills-images" v-for="(key, value) in post.images" :key="index">
-              <Tooltip :text="value">
-                <img v-if="key" :src="'/src/assets/skills/' + key">
-              </Tooltip>
-            </div>
+  <div class="flex-container">
+    <div class="aboutme">
+      <div v-for="(post, index) in posts" :key="index">
+        <div v-if="post.title" class="title">{{ post.title }}</div>
+        <div v-if="post.body" class="body">{{ post.body }}</div>
+        <div class="skills-container">
+          <div class="skills-images" v-for="(key, value) in post.images" :key="index">
+            <Tooltip :text="value">
+              <img v-if="key" :src="'/src/assets/skills/' + key">
+            </Tooltip>
           </div>
         </div>
       </div>
     </div>
-  </main>
+  </div>
 </template>
 
 <script>
@@ -34,7 +32,7 @@ export default {
           I am a strong believer in dynamic and scalable design. Anytime you can reuse components in different ways, it not only speeds up workflow but also keeps consistency throughout the project, which is great for user experience. As an engineer, I have experience collaborating closely with design teams to make sure we keep that in mind.`
         },
         { id: 1, title: "Skills", images: { "Figma": "figma.png", "Vue.js": "vue.png", "Photoshop": "photoshop.png", "Adobe Illustrator": "ai.png", "Wireframing": "wireframe.png" } },
-        { id: 2, title: "Hobbies", body: "Hobbies" },
+        { id: 2, title: "Hobbies", body: ["Photography", "Video games"].join(", ") },
       ]
     };
   },
@@ -49,11 +47,10 @@ export default {
 }
 
 .aboutme {
-  width: 1000px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-content: flex-start;
-  flex-wrap: wrap;
 }
 
 
@@ -63,14 +60,12 @@ export default {
   font-weight: 700;
 }
 
-.body {
-  margin-bottom: 20px;
-}
-
 .skills-container {
   display: flex;
   flex-direction: row;
-  gap: 35px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 330px;
 }
 
 img {
