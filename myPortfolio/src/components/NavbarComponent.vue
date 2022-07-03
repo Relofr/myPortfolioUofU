@@ -1,16 +1,3 @@
-<script>
-export default {
-    methods: {
-        triggerNav() {
-            document.addEventListener('DOMContentLoaded', function () {
-                var elems = document.querySelectorAll('.sidenav');
-                var instances = M.Sidenav.init(elems, options);
-            });
-        }
-    }
-}
-</script>
-
 <template>
     <nav>
         <div class="nav-wrapper">
@@ -51,6 +38,19 @@ export default {
 
 </template>
 
+<script>
+export default {
+    methods: {
+        triggerNav() {
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.sidenav');
+                var instances = M.Sidenav.init(elems, options);
+            });
+        }
+    }
+}
+</script>
+
 <style lang='less' scoped>
 .nav-wrapper {
     width: 100%;
@@ -59,6 +59,7 @@ export default {
 nav {
     background-color: #fff;
     width: 100%;
+    margin-bottom: 20px;
     // line-height: 60px;
 
     a {
@@ -74,6 +75,7 @@ nav {
         cursor: pointer;
     }
 }
+
 .brand-logo {
     width: 65px;
     padding: 10px;

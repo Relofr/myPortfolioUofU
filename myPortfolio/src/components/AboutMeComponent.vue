@@ -29,6 +29,7 @@ export default {
   padding: 0px;
   gap: 80px;
   width: 1000px;
+  height: 100vh;
 }
 
 .aboutme {

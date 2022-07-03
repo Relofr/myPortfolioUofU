@@ -1,5 +1,5 @@
 <template>
-    <div class="tooltip-container" @mouseover="hover = true" @mouseleave="hover = false">
+    <div class="tooltip-container" @mouseover="hover = true" @mouseleave="upHere = false">
         <slot />
         <div v-show="hover" class="tooltip">
             <span class="text">{{ text }}</span>
@@ -27,6 +27,7 @@ export default {
 .tooltip-container {
     position: relative;
     display: inline-block;
+    width: 100%;
 }
 
 .tooltip-container:hover .tooltip {
@@ -35,6 +36,7 @@ export default {
 
 .tooltip {
     color: #ffffff;
+    font-size: 12px;
     text-align: center;
     padding: 10px 0;
     border-radius: 2px;
@@ -51,6 +53,7 @@ export default {
     z-index: 1;
 
     background: #000000;
+    border-radius: 4px;
 }
 
 .text::after {
