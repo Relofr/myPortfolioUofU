@@ -1,6 +1,6 @@
 @import './constants';
 
-* { 
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,7 +8,7 @@
 
 html {
   height: 100%;
-  font-size: 16px;
+  font-size: 100%;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -30,4 +30,16 @@ main {
   align-items: center;
   min-height: calc(100vh - 150px);
   margin-bottom: 50px;
+}
+
+.title-text {
+  // margin-top: 40px;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.body-text {
+  // margin-bottom: 15px;
 }

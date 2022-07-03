@@ -1,10 +1,9 @@
 <template>
   <div class="container">
-    <h3>About Me</h3>
     <div class="flex-container">
       <div v-for="(post, index) in posts" :key="index">
-        <div v-if="post.title" class="title">{{ post.title }}</div>
-        <div v-if="post.body" class="body">{{ post.body }}</div>
+        <div v-if="post.title" class="title-text">{{ post.title }}</div>
+        <div v-if="post.body" class="body-text">{{ post.body }}</div>
 
         <div v-if="post.body2" class="body">{{ post.body2 }}</div>
         <div class="skills-container">
@@ -30,12 +29,12 @@ export default {
       posts: [
         {
           id: 0,
-          title: "",
+          title: "About me",
           body: `My journey to UX/UI started at a young age when I would create designs in Microsoft Paint and write simple HTML/CSS on my parent's computer. Since then, I have studied Computer Science and have been working as a software engineer. I plan to transition full-time to UX/UI after I finish the program at The University of Utah.`, body2: `I am a strong believer in dynamic and scalable design. Anytime you can reuse components in different ways, it not only speeds up workflow but also keeps consistency throughout the project, which is great for user experience. As an engineer, I have experience collaborating closely with design teams to make sure we keep that in mind.`
         },
         { id: 1, title: "My Design Process", body: `Body` },
-        { id: 2, title: "my skillset", images: { "Figma": "figma.png", "Wireframing": "wireframe.png", "Photoshop": "photoshop.png", "Adobe Illustrator": "ai.png", "Vue.js": "vue.png", "Github": "github.png" } },
-        { id: 3, title: "Hobbies", body: ["Photography", "Video games"].join(", ") },
+        { id: 2, title: "my skillset", images: { "Figma": "figma.png",  "Invision" : "invision.png", "Wireframing": "wireframe.png", "Photoshop": "photoshop.png", "Adobe Illustrator": "ai.png", "Vue.js": "vue.png", "Github": "github.png" } },
+        { id: 3, title: "Hobbies", body: ["Photography", "Video games", "UX/UI", "Programming"].join(", ") },
       ]
     };
   },
@@ -48,26 +47,23 @@ export default {
   display: flex;
   justify-content: center;
   flex-direction: column;
-}
 
-.title {
-  margin-top: 40px;
-  font-size: 32px;
-  font-weight: 400;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
+  & .title-text {
+    margin: 40px 0px 15px 0px;
+  }
 
-.body {
-  margin-bottom: 15px;
+  & .body-text {
+    margin-bottom: 15px;
+  }
 }
 
 .skills-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
-  max-width: 500px;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
 img {
