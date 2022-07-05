@@ -3,6 +3,9 @@ import HomeView from '../views/HomeView.vue'
 import WorkView from '../views/WorkView.vue'
 import AboutView from '../views/AboutView.vue'
 import ContactView from '../views/ContactView.vue'
+import RegisterView from '../views/RegisterView.vue'
+import SignInView from '../views/SignInView.vue'
+import PostCreate from '../components/PostCreate.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,6 +30,21 @@ const router = createRouter({
       name: 'contact',
       component: ContactView
     }
+    // {
+    //   path: '/create',
+    //   name: 'create',
+    //   component: PostCreate
+    // },
+    // {
+    //   path: '/register',
+    //   name: 'register',
+    //   component: RegisterView
+    // },
+    // {
+    //   path: '/login',
+    //   name: 'login',
+    //   component: SignInView
+    // }
   ]
 })
 

@@ -17,6 +17,18 @@
                 <li>
                     <RouterLink to="/contact">Contact</RouterLink>
                 </li>
+                <!-- <li v-if="isLoggedIn">
+                    <RouterLink to="/create">Create Post</RouterLink>
+                </li>
+                <li v-if="!isLoggedIn">
+                    <RouterLink to="/login">Login</RouterLink>
+                </li>
+                <li>
+                    <RouterLink to="/register">Register</RouterLink>
+                </li>
+                <li>
+                    <a v-if="isLoggedIn" @click="handleSignOut" class="waves-effect waves-light">Logout</a>
+                </li> -->
             </ul>
         </div>
     </nav>
@@ -38,6 +50,31 @@
 
 </template>
 
+<script setup>
+// import { onMounted, ref } from 'vue';
+// import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
+import router from '../router';
+
+// const isLoggedIn = ref(false);
+
+// let auth;
+// onMounted(() => {
+//     auth = getAuth();
+//     onAuthStateChanged(auth, (user) => {
+//         if (user) {
+//             isLoggedIn.value = true;
+//         } else {
+//             isLoggedIn.value = false;
+//         }
+//     })
+// });
+
+// const handleSignOut = () => {
+//     signOut(auth).then(() => {
+//         router.push('/')
+//     })
+// }
+</script>
 <script>
 export default {
     methods: {
